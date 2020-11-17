@@ -9,10 +9,13 @@ for (var i = 0; i < 100 ; i++){
     array[i]= i+1 ;
 }
  var resultPrint=document.getElementById('numeri');
+ document.getElementById('btn').addEventListener("click", function(){
  for (var j = 0; j < array.length; j++) {
-   if (array[j] % 5 ==0 && array[j] %3 == 0) resultPrint.innerHTML+= "<strong>FizzBuzz</strong>"+",";
+   if (array[j] % 5 ==0 && array[j] %3 == 0) resultPrint.innerHTML+= "<strong>FizzBuzz</strong>"+", ";
    else if(array[j] % 5 == 0) resultPrint.innerHTML+= "<strong> Buzz</strong>"+ ", ";
    else if (array[j] %3 == 0) resultPrint.innerHTML+= " <strong>Fizz</strong>"+ ", ";
    else resultPrint.innerHTML+= " "+ array[j] + ", ";
+   document.getElementById('numeri').classList.add('show');
 
  }
+});

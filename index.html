@@ -28,6 +28,7 @@
     }
     #wrapper h1 {
       color: #665e61;
+      align-self: center;
     }
     #partecipanti {
       color: red;
@@ -35,17 +36,44 @@
       font-size: 20px;
     }
 
+    button:focus {
+      background-color: coral;
+      border: coral;
+      color: white;
+    }
 
+    button:hover {
+      background-color: #ffbcac;
+      color: white;
+    }
+    p{
+      width: 0%;
+      /* opacity: 0; */
+    }
+    .show {
+      width: 100%;
+      transition: 1.5s ease-in-out;
+      /* opacity: 1!important; */
+    }
+    button {
+      width: 120px;
+      height: 50px;
+      align-self: center;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color:coral;
+      background-color: transparent;
+      border: 2px solid coral;
+      cursor: pointer;
+    }
   </style>
   <body>
     <div id="wrapper" class="">
       <h1>FizzBuzz</h1>
-      <p id="numeri">
+      <p id="numeri" class="">
       </p>
-      <p id="position">
-
-      </p>
-      </p>
+      <button id="btn" type="button" name="button">Mostra il risultato</button>
     </div>
   </body>
   <script src="js/script.js" charset="utf-8"></script>
