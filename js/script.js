@@ -3,18 +3,14 @@
 // Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
 
 // Scrivi un programma che stampi i numeri da 1 a 100,
-var array=[];
 
-for (var i = 0; i < 100 ; i++){
-    array[i]= i+1 ;
-}
  var resultPrint=document.getElementById('numeri');
  document.getElementById('btn').addEventListener("click", function(){
- for (var j = 0; j < array.length; j++) {
-   if (array[j] % 5 ==0 && array[j] %3 == 0) resultPrint.innerHTML+= "<strong>FizzBuzz</strong>"+", ";
-   else if(array[j] % 5 == 0) resultPrint.innerHTML+= "<strong> Buzz</strong>"+ ", ";
-   else if (array[j] %3 == 0) resultPrint.innerHTML+= " <strong>Fizz</strong>"+ ", ";
-   else resultPrint.innerHTML+= " "+ array[j] + ", ";
+ for (var j = 1; j <=100; j++) {
+   if (j % 5 ==0 && j %3 == 0) resultPrint.innerHTML+= " <strong>FizzBuzz</strong>"+", ";
+   else if(j % 5 == 0) resultPrint.innerHTML+= " <strong> Buzz</strong>"+ ", ";
+   else if (j %3 == 0) resultPrint.innerHTML+= " <strong>Fizz</strong>"+ ", ";
+   else resultPrint.innerHTML+= " "+ j + ", ";
    document.getElementById('numeri').classList.add('show');
 
  }
