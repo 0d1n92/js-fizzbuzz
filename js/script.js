@@ -4,14 +4,14 @@
 
 // Scrivi un programma che stampi i numeri da 1 a 100,
 
- var resultPrint=document.getElementById('numeri');
  document.getElementById('btn').addEventListener("click", function(){
- for (var j = 1; j <=100; j++) {
-   if (j % 5 ==0 && j %3 == 0) resultPrint.innerHTML+= " <strong>FizzBuzz</strong>"+", ";
-   else if(j % 5 == 0) resultPrint.innerHTML+= " <strong> Buzz</strong>"+ ", ";
-   else if (j %3 == 0) resultPrint.innerHTML+= " <strong>Fizz</strong>"+ ", ";
-   else resultPrint.innerHTML+= " "+ j + ", ";
+ for (var j = 1; j <= 100; j++) {
+   var messaggio= " "+ j + ", ";
+   // if (j % 5 ==0 && j % 3 == 0) messaggio= " <strong>FizzBuzz</strong>"+", ";
+   if (j % 15== 0) messaggio= " <strong>FizzBuzz</strong>"+", ";
+   else if(j % 5 == 0) messaggio= " <strong> Buzz</strong>"+ ", ";
+   else if (j % 3 == 0) messaggio= " <strong>Fizz</strong>"+ ", ";
+   document.getElementById('numeri').innerHTML+=messaggio;
    document.getElementById('numeri').classList.add('show');
-
  }
 });
